@@ -1,4 +1,8 @@
 import SeedanceHeroSection from '@/components/blocks/hero/seedance-hero';
+import SeedanceStudioPreview from '@/components/blocks/features/seedance-studio-preview';
+import SeedanceFeaturesSection from '@/components/blocks/features/seedance-features';
+import SeedanceWhyChooseSection from '@/components/blocks/features/seedance-why-choose';
+import SeedanceHowToUseSection from '@/components/blocks/features/seedance-how-to-use';
 import ShowcaseGrid from '@/components/blocks/showcase/showcase-grid';
 import SeedancePricingSection from '@/components/blocks/pricing/seedance-pricing-section';
 import FaqSection from '@/components/blocks/faqs/faqs';
@@ -95,6 +99,14 @@ export default async function HomePage(props: HomePageProps) {
       />
 
       <SeedanceHeroSection />
+
+      <SeedanceStudioPreview />
+
+      <SeedanceFeaturesSection />
+
+      <SeedanceWhyChooseSection />
+
+      <SeedanceHowToUseSection />
 
       <ShowcaseGrid />
 

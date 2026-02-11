@@ -38,7 +38,9 @@ const customNavigationMenuTriggerStyle = cn(
   'hover:bg-accent hover:text-accent-foreground',
   'focus:bg-accent focus:text-accent-foreground',
   'data-active:font-semibold data-active:bg-transparent data-active:text-accent-foreground',
-  'data-[state=open]:bg-transparent data-[state=open]:text-accent-foreground'
+  'data-[state=open]:bg-transparent data-[state=open]:text-accent-foreground',
+  // When parent navbar is transparent, use white text
+  'group-data-[transparent=true]/navbar:text-white/80 group-data-[transparent=true]/navbar:hover:text-white group-data-[transparent=true]/navbar:hover:bg-white/10'
 );
 
 export function Navbar({ scroll }: NavBarProps) {
@@ -57,6 +59,7 @@ export function Navbar({ scroll }: NavBarProps) {
 
   return (
     <section
+      data-transparent={scroll && !scrolled ? 'true' : undefined}
       className={cn(
         'sticky inset-x-0 top-0 z-40 py-4 transition-all duration-300',
         scroll
@@ -68,12 +71,12 @@ export function Navbar({ scroll }: NavBarProps) {
     >
       <Container className="px-4">
         {/* desktop navbar */}
-        <nav className="hidden lg:flex">
+        <nav className="hidden lg:flex group/navbar" data-transparent={scroll && !scrolled ? 'true' : undefined}>
           {/* logo and name */}
           <div className="flex items-center">
             <LocaleLink href="/" className="flex items-center space-x-2">
               <Logo />
-              <span className="text-xl font-semibold">
+              <span className={cn('text-xl font-semibold transition-colors', scroll && !scrolled && 'text-white')}>
                 {t('Metadata.name')}
               </span>
             </LocaleLink>
@@ -230,7 +233,7 @@ export function Navbar({ scroll }: NavBarProps) {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="cursor-pointer"
+                    className={cn('cursor-pointer', scroll && !scrolled && 'border-white/30 text-white hover:bg-white/10 hover:text-white')}
                   >
                     {t('Common.login')}
                   </Button>
@@ -242,7 +245,8 @@ export function Navbar({ scroll }: NavBarProps) {
                     buttonVariants({
                       variant: 'default',
                       size: 'sm',
-                    })
+                    }),
+                    scroll && !scrolled && 'bg-white text-black hover:bg-white/90'
                   )}
                 >
                   {t('Common.signUp')}

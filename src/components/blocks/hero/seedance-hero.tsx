@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { HeroVideoBackground } from './hero-video-background';
 
 const transitionVariants = {
   item: {
@@ -30,32 +31,18 @@ const transitionVariants = {
 /**
  * SeedanceAI Hero Section
  *
- * Sora2.com-inspired full-screen hero with:
- * - Pure black background (#050505)
- * - Video background (muted, looping)
- * - Large centered headline "Creating Reality, with Sound."
- * - White capsule CTA "Start Creating"
+ * Content is fully static — never re-renders.
+ * Video cycling + sound toggle are isolated in HeroVideoBackground.
  */
 export default function SeedanceHeroSection() {
   const t = useTranslations('HomePage.hero');
 
   return (
-    <main id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#050505]">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-[#050505] z-10" />
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/hero-bg1.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <main id="hero" className="relative min-h-screen -mt-[72px] pt-[72px] flex items-center justify-center overflow-hidden bg-[#050505]">
+      {/* Video background + sound toggle (isolated state) */}
+      <HeroVideoBackground />
 
-      {/* Content */}
+      {/* Content — completely static, never re-renders on video switch */}
       <section className="relative z-20 text-center px-6 max-w-5xl mx-auto">
         {/* Badge */}
         <AnimatedGroup variants={transitionVariants}>
@@ -108,7 +95,7 @@ export default function SeedanceHeroSection() {
           }}
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          {/* Primary CTA - White capsule button */}
+          {/* Primary CTA */}
           <LocaleLink href="/studio" key="primary-cta">
             <Button
               size="lg"

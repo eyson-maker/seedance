@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "name": "SeedanceAI",
-    "title": "SeedanceAI — AI Video Generator Powered by Seedance 2.0 | Create Cinematic Videos with Sound",
-    "description": "SeedanceAI is the professional AI video generator built on Seedance 2.0. Generate cinematic videos with native audio sync, upload up to 12 reference files for consistent characters, and create with commercial license. Try Seedance AI today."
+    "title": "Seedance 2.0 AI Video Generator | SeedanceAI",
+    "description": "Create cinematic AI videos with Seedance 2.0. Native audio sync, 12 reference files for character control, and commercial license. Try Seedance AI free."
   },
   "Common": {
     "premium": "Premium",
@@ -784,10 +784,10 @@
     "title": "SeedanceAI",
     "description": "Generate Cinematic Videos with Sound. Powered by Seedance 2.0.",
     "hero": {
-      "title": "Creating Reality, with Sound.",
-      "description": "Generate cinematic videos with native audio sync. Upload up to 12 reference files for precise control over characters, motion, and style.",
+      "title": "Seedance 2.0 AI Video Generator",
+      "description": "Create cinematic AI videos with Seedance 2.0. Native audio sync, up to 12 reference files for character, motion, and style control.",
       "introduction": "Powered by Seedance 2.0",
-      "primary": "Start Creating",
+      "primary": "Start Creating with Seedance 2.0",
       "secondary": "View Pricing"
     },
     "logocloud": {
@@ -832,25 +832,33 @@
       "secondaryButton": "See Demo"
     },
     "features": {
-      "title": "Features",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "title": "Seedance 2.0 Features",
+      "subtitle": "Powerful AI Video Generation with Seedance 2.0",
+      "description": "Discover why Seedance 2.0 is the most advanced AI video generator available today.",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here, make it as detailed as possible, make it more attractive to users"
+          "title": "Text to Video",
+          "description": "Transform text prompts into stunning cinematic videos with Seedance 2.0. Describe any scene and let Seedance AI bring it to life with realistic motion and detail."
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here, make it as detailed as possible, make it more attractive to users"
+          "title": "Image to Video",
+          "description": "Animate still images into dynamic videos using Seedance 2.0's motion engine. Upload a photo and Seedance AI generates natural movement while preserving visual quality."
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here, make it as detailed as possible, make it more attractive to users"
+          "title": "Native Audio Sync",
+          "description": "Seedance 2.0 generates videos with built-in audio synchronization. Dialogue, sound effects, and ambient audio are natively created by the Seedance AI model."
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here, make it as detailed as possible, make it more attractive to users"
+          "title": "12 Reference Files",
+          "description": "Upload up to 12 reference files in Seedance 2.0 for precise control. Use face, motion, structure, style, and audio references to guide Seedance AI generation."
+        },
+        "item-5": {
+          "title": "HD Quality Output",
+          "description": "Seedance 2.0 supports 720p and 1080p video output in 5s or 10s durations. Every Seedance AI video is cinematic-grade with sharp detail and smooth motion."
+        },
+        "item-6": {
+          "title": "Commercial License",
+          "description": "All Seedance 2.0 generated videos come with commercial usage rights. Use Seedance AI content for business, marketing, social media, and client projects."
         }
       }
     },
@@ -899,9 +907,51 @@
       "subtitle": "Pricing",
       "description": "Choose the plan that works best for you"
     },
+    "whyChoose": {
+      "title": "Why Choose Seedance 2.0",
+      "subtitle": "The Most Advanced AI Video Generation Model",
+      "description": "Seedance 2.0 sets a new standard for AI video generation with capabilities no other model can match.",
+      "items": {
+        "item-1": {
+          "title": "Latest Generation AI Model",
+          "description": "Seedance 2.0 is built on the newest video generation architecture, delivering unprecedented realism and motion quality that outperforms every competitor."
+        },
+        "item-2": {
+          "title": "Native Audio Generation",
+          "description": "Unlike other AI video tools, Seedance 2.0 generates synchronized audio natively. Dialogue, sound effects, and ambient sounds are created alongside the video."
+        },
+        "item-3": {
+          "title": "Best Character Consistency",
+          "description": "Seedance 2.0 supports up to 12 reference files for unmatched character consistency. Faces, clothing, and body types stay accurate across every frame."
+        },
+        "item-4": {
+          "title": "Commercial Ready",
+          "description": "Every video generated by Seedance 2.0 comes with full commercial rights. Use Seedance AI content freely for business, marketing, and client deliverables."
+        }
+      }
+    },
+    "howToUse": {
+      "title": "How to Use Seedance 2.0",
+      "subtitle": "Create AI Videos in 3 Simple Steps",
+      "description": "Getting started with Seedance 2.0 is fast and easy. Follow these steps to generate your first Seedance AI video.",
+      "steps": {
+        "step-1": {
+          "title": "Enter Your Prompt",
+          "description": "Describe the video you want to create with Seedance 2.0. Add text prompts or upload reference images, videos, and audio files for precise control."
+        },
+        "step-2": {
+          "title": "Seedance 2.0 Generates",
+          "description": "Seedance AI processes your prompt and references to generate a cinematic video with native audio sync. Generation takes just minutes."
+        },
+        "step-3": {
+          "title": "Download & Share",
+          "description": "Preview your Seedance 2.0 generated video, download in HD quality, and share directly to social media or use in your projects with full commercial rights."
+        }
+      }
+    },
     "faqs": {
-      "title": "FAQ",
-      "subtitle": "Frequently Asked Questions about SeedanceAI",
+      "title": "Seedance 2.0 FAQ",
+      "subtitle": "Frequently Asked Questions About Seedance 2.0",
       "items": {
         "item-1": {
           "question": "What is SeedanceAI and how does it use Seedance 2.0?",
