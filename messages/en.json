@@ -45,6 +45,10 @@
     }
   },
   "PricingPage": {
+    "meta": {
+      "title": "Pricing | SeedanceAI",
+      "description": "Choose the best plan for your video generation needs. Get started for free."
+    },
     "title": "Pricing",
     "description": "Choose the plan that works best for you",
     "subtitle": "Choose the plan that works best for you",
@@ -484,6 +488,14 @@
     }
   },
   "Dashboard": {
+    "sidebar": {
+      "home": "Home",
+      "create": "Create",
+      "gallery": "Gallery",
+      "account": "Account",
+      "general": "General",
+      "help": "Help & Support"
+    },
     "dashboard": {
       "title": "Dashboard"
     },

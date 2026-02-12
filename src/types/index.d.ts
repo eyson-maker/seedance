@@ -184,6 +184,7 @@ export interface CreditsConfig {
     expireDays?: number;             // The number of days to expire the credits, undefined means no expire
   };
   packages: Record<string, CreditPackage>;  // Packages indexed by ID
+  payg?: Record<string, CreditPackage>;     // Pay-as-you-go packages (lower threshold)
 }
 
 /**

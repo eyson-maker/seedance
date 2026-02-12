@@ -492,6 +492,14 @@
     }
   },
   "Dashboard": {
+    "sidebar": {
+      "home": "首页",
+      "create": "创作",
+      "gallery": "相册",
+      "account": "账户",
+      "general": "通用",
+      "help": "帮助与支持"
+    },
     "dashboard": {
       "title": "仪表盘"
     },

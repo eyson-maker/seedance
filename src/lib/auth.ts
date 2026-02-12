@@ -24,6 +24,7 @@ import { getBaseUrl, getUrlWithLocaleInCallbackUrl } from './urls/urls';
  * https://www.better-auth.com/docs/reference/options
  */
 export const auth = betterAuth({
+
   baseURL: getBaseUrl(),
   appName: defaultMessages.Metadata.name,
   database: drizzleAdapter(await getDb(), {

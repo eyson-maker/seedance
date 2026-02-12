@@ -6,13 +6,24 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import * as schema from './schema';
 
-let db: ReturnType<typeof drizzle> | null = null;
+const globalForDb = globalThis as unknown as {
+  db: ReturnType<typeof drizzle> | undefined;
+};
 
 export async function getDb() {
-  if (db) return db;
-  const connectionString = process.env.DATABASE_URL!;
-  const client = postgres(connectionString, { prepare: false });
-  db = drizzle(client, { schema });
+  if (globalForDb.db) return globalForDb.db;
+
+  const connectionString = process.env.POSTGRES_URL || process.env.DATABASE_URL!;
+  const client = postgres(connectionString, { 
+    prepare: false,
+    connect_timeout: 10,
+  });
+  const db = drizzle(client, { schema });
+  
+  if (process.env.NODE_ENV !== 'production') {
+    globalForDb.db = db;
+  }
+  
   return db;
 }
 

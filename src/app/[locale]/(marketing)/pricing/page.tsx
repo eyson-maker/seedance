@@ -1,13 +1,34 @@
 import FaqSection from '@/components/blocks/faqs/faqs';
-import Container from '@/components/layout/container';
-import { PricingTable } from '@/components/pricing/pricing-table';
+import SeedancePricingSection from '@/components/blocks/pricing/seedance-pricing-section';
+import { getTranslations } from 'next-intl/server';
+import { constructMetadata } from '@/lib/metadata';
+import type { Metadata } from 'next';
+import type { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata | undefined> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'PricingPage' });
+
+  return constructMetadata({
+    title: t('meta.title'),
+    description: t('meta.description'),
+    locale,
+    pathname: '/pricing',
+  });
+}
 
 export default async function PricingPage() {
   return (
-    <Container className="mt-8 max-w-6xl px-4 flex flex-col gap-16">
-      <PricingTable />
+    <div className="flex flex-col bg-[#050505] min-h-screen">
+      <div className="mt-20">
+        <SeedancePricingSection />
+      </div>
 
       <FaqSection />
-    </Container>
+    </div>
   );
 }

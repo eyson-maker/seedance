@@ -37,6 +37,10 @@ export enum Routes {
   SettingsSecurity = '/settings/security',
   SettingsNotifications = '/settings/notifications',
 
+  // studio / workspace
+  Studio = '/studio',
+  Gallery = '/gallery',
+
   // payment processing
   Payment = '/payment',
 
@@ -78,6 +82,8 @@ export const routesNotAllowedByLoggedInUsers = [Routes.Login, Routes.Register];
  */
 export const protectedRoutes = [
   Routes.Dashboard,
+  Routes.Studio,
+  Routes.Gallery,
   Routes.AdminUsers,
   Routes.SettingsProfile,
   Routes.SettingsBilling,

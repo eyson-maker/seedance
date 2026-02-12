@@ -11,7 +11,7 @@ export const websiteConfig: WebsiteConfig = {
   ui: {
     mode: {
       defaultMode: 'dark',
-      enableSwitch: true,
+      enableSwitch: false,
     },
   },
   metadata: {
@@ -178,8 +178,8 @@ export const websiteConfig: WebsiteConfig = {
     enableCredits: true,
     enablePackagesForFreePlan: false,
     registerGiftCredits: {
-      enable: false,
-      amount: 0,
+      enable: true,
+      amount: 10,
       expireDays: 0,
     },
     packages: {
@@ -212,6 +212,41 @@ export const websiteConfig: WebsiteConfig = {
         price: {
           priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_CREDITS_PROFESSIONAL!,
           amount: 9990,
+          currency: 'USD',
+          allowPromotionCode: true,
+        },
+      },
+    },
+    payg: {
+      mini: {
+        id: 'payg-mini',
+        popular: false,
+        amount: 200,
+        price: {
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PAYG_MINI!,
+          amount: 599,
+          currency: 'USD',
+          allowPromotionCode: true,
+        },
+      },
+      plus: {
+        id: 'payg-plus',
+        popular: true,
+        amount: 500,
+        price: {
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PAYG_PLUS!,
+          amount: 1499,
+          currency: 'USD',
+          allowPromotionCode: true,
+        },
+      },
+      power: {
+        id: 'payg-power',
+        popular: false,
+        amount: 1500,
+        price: {
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PAYG_POWER!,
+          amount: 3999,
           currency: 'USD',
           allowPromotionCode: true,
         },

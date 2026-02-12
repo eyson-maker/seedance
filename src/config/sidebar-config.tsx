@@ -8,10 +8,12 @@ import {
   CircleUserRoundIcon,
   CoinsIcon,
   CreditCardIcon,
-  LayoutDashboardIcon,
+  GalleryVerticalEndIcon,
+  HelpCircleIcon,
+  HomeIcon,
   LockKeyholeIcon,
-  Settings2Icon,
   SettingsIcon,
+  SparklesIcon,
   UsersRoundIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -34,28 +36,30 @@ export function useSidebarLinks(): NestedMenuItem[] {
   const isDemo = isDemoWebsite();
 
   return [
+    // ── Primary Zone ──────────────────────────
     {
-      title: t('dashboard.title'),
-      icon: <LayoutDashboardIcon className="size-4 shrink-0" />,
-      href: Routes.Dashboard,
+      title: t('sidebar.home'),
+      icon: <HomeIcon className="size-4 shrink-0" />,
+      href: Routes.Root,
       external: false,
     },
     {
-      title: t('admin.title'),
-      icon: <SettingsIcon className="size-4 shrink-0" />,
-      authorizeOnly: isDemo ? ['admin', 'user'] : ['admin'],
-      items: [
-        {
-          title: t('admin.users.title'),
-          icon: <UsersRoundIcon className="size-4 shrink-0" />,
-          href: Routes.AdminUsers,
-          external: false,
-        },
-      ],
+      title: t('sidebar.create'),
+      icon: <SparklesIcon className="size-4 shrink-0" />,
+      href: Routes.Studio,
+      external: false,
     },
     {
-      title: t('settings.title'),
-      icon: <Settings2Icon className="size-4 shrink-0" />,
+      title: t('sidebar.gallery'),
+      icon: <GalleryVerticalEndIcon className="size-4 shrink-0" />,
+      href: Routes.Gallery,
+      external: false,
+    },
+
+    // ── Account ───────────────────────────────
+    {
+      title: t('sidebar.account'),
+      icon: <CircleUserRoundIcon className="size-4 shrink-0" />,
       items: [
         {
           title: t('settings.profile.title'),
@@ -79,6 +83,14 @@ export function useSidebarLinks(): NestedMenuItem[] {
               },
             ]
           : []),
+      ],
+    },
+
+    // ── General ───────────────────────────────
+    {
+      title: t('sidebar.general'),
+      icon: <SettingsIcon className="size-4 shrink-0" />,
+      items: [
         {
           title: t('settings.security.title'),
           icon: <LockKeyholeIcon className="size-4 shrink-0" />,
@@ -89,6 +101,27 @@ export function useSidebarLinks(): NestedMenuItem[] {
           title: t('settings.notification.title'),
           icon: <BellIcon className="size-4 shrink-0" />,
           href: Routes.SettingsNotifications,
+          external: false,
+        },
+        {
+          title: t('sidebar.help'),
+          icon: <HelpCircleIcon className="size-4 shrink-0" />,
+          href: 'mailto:support@useseedance.com',
+          external: true,
+        },
+      ],
+    },
+
+    // ── Admin (admin role only) ───────────────
+    {
+      title: t('admin.title'),
+      icon: <SettingsIcon className="size-4 shrink-0" />,
+      authorizeOnly: isDemo ? ['admin', 'user'] : ['admin'],
+      items: [
+        {
+          title: t('admin.users.title'),
+          icon: <UsersRoundIcon className="size-4 shrink-0" />,
+          href: Routes.AdminUsers,
           external: false,
         },
       ],
